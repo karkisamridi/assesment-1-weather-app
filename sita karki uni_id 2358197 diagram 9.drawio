@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" modified="2023-07-16T14:01:27.306Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="x-9fVcL5o5e7yPgZ2Qb-" version="21.6.2" type="device">
+  <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
+    <mxGraphModel dx="1050" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WCwqfFokdwG11yXASsNB-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=135;exitDy=0;exitPerimeter=0;entryX=0.422;entryY=1.005;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="WCwqfFokdwG11yXASsNB-1" target="WCwqfFokdwG11yXASsNB-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-1" value="Web Server" style="verticalAlign=top;align=left;shape=cube;size=10;direction=south;fontStyle=0;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="50" y="200" width="190" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-5" value="Module" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="280" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-10" value="WeatherAPIdata" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="100" y="325" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=220;exitDy=0;exitPerimeter=0;entryX=0.35;entryY=1.005;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="WCwqfFokdwG11yXASsNB-12" target="WCwqfFokdwG11yXASsNB-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-12" value="Block" style="verticalAlign=top;align=left;shape=cube;size=10;direction=south;fontStyle=0;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="340" y="100" width="220" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-15" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; JavaScript" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="380" y="430" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-17" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; CSS" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="380" y="295" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-19" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;HTML" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="380" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-21" value="Web &amp;nbsp;Browser" style="verticalAlign=top;align=left;shape=cube;size=10;direction=south;fontStyle=0;html=1;boundedLbl=1;spacingLeft=5;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="620" y="200" width="200" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-23" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; HTML" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;spacingLeft=5;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="640" y="370" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-25" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Cache" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;spacingLeft=5;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="640" y="265" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WCwqfFokdwG11yXASsNB-29" value="Sita karki&lt;br&gt;2358197" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="575" y="113" width="70" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+  <link rel="stylesheet" href="sita.css">
+</head>
+<body>
+  <div class="card">
+    <div class="search">
+      <input type="text" placeholder="Enter city name" spellcheck="false">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="error">
+      <p>Invalid city name</p>
+    </div>
+    <div class="weather">
+      <i class="wi wi-day-sunny weather-icon"></i>
+      <h1 class="temp">22°C</h1>
+      <h2 class="city">Stoke-on-Trent</h2>
+      <div class="details">
+        <div class="col">
+          <i class="wi wi-humidity"></i>
+          <div>
+            <p class="humidity">50%</p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="col">
+          <i class="wi wi-strong-wind"></i>
+          <div>
+            <p class="wind">15 km/h</p>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+        <div class="col">
+          <i class="wi wi-barometer"></i>
+          <div>
+            <p class="pressure">1000 hPa</p>
+            <p>Pressure</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const apiKey = "7066d0c18fbed539df7d9f0b5d633b71";
+    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q={city}&appid=7066d0c18fbed539df7d9f0b5d633b71&units=metric";
+    const searchBox = document.querySelector(".search input");
+    const searchBtn = document.querySelector(".search button");
+    const weatherIcon = document.querySelector(".weather-icon");
+
+    async function checkWeather(city) {
+      const response = await fetch(apiUrl.replace('{city}', city) + "&appid=" + apiKey);
+      if (response.status === 404) {
+        document.querySelector(".error").style.display = "block";
+        document.querySelector(".weather").style.display = "none";
+      } else {
+        const data = await response.json();
+        document.querySelector(".city").textContent = data.name;
+        document.querySelector(".temp").textContent = Math.round(data.main.temp) + "°C";
+        document.querySelector(".humidity").textContent = data.main.humidity + "%";
+        document.querySelector(".wind").textContent = data.wind.speed + " km/h";
+        document.querySelector(".pressure").textContent = data.main.pressure + " hPa";
+
+        const weather = data.weather[0].main.toLowerCase();
+        weatherIcon.className = "wi";
+        if (weather === "clouds") {
+          weatherIcon.classList.add("wi-cloudy");
+        } else if (weather === "clear") {
+          weatherIcon.classList.add("wi-day-sunny");
+        } else if (weather === "rain") {
+          weatherIcon.classList.add("wi-rain");
+        } else if (weather === "drizzle") {
+          weatherIcon.classList.add("wi-sprinkle");
+        } else if (weather === "mist") {
+          weatherIcon.classList.add("wi-fog");
+        }
+
+        document.querySelector('.weather').style.display = "block";
+        document.querySelector('.error').style.display = "none";
+      }
+    }
+
+    searchBtn.addEventListener("click", () => {
+      checkWeather(searchBox.value);
+    });
+
+    checkWeather("Stoke-on-Trent");
+  </script>
+</body>
+</html>
